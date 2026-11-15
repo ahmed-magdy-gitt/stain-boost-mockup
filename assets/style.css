@@ -54,3 +54,25 @@ label{display:block;font-size:11px;letter-spacing:1px;color:#aab6d6;margin-botto
 @media(max-width:960px){.herogrid,.about,.logingrid{grid-template-columns:1fr}.fstrip,.grid4,.grid3{grid-template-columns:1fr 1fr}.slots{display:none}
 .burger{display:block}.nav{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;background:#070d20;border-bottom:1px solid var(--ln);padding:8px 20px;margin:0}.nav.on{display:flex}.nav a{padding:12px 0}.hdin{gap:10px}.hr{margin-left:auto}}
 @media(max-width:620px){h1,.t,.lside h1{font-size:32px}.grid3,.grid4,.fstrip,.score,.oauth{grid-template-columns:1fr}.hr .btn{padding:8px 10px;font-size:12px}.logo{font-size:18px}}
+/* restyle */
+:root{--bg:#050a18;--ln:#16336b;--bl:#1fa2ff;--hf:Bahnschrift,"Segoe UI Semibold","Trebuchet MS",sans-serif}
+body{background:radial-gradient(ellipse at 15% -10%,#0f2358 0,transparent 50%),radial-gradient(ellipse at 95% 40%,#1c1250 0,transparent 45%),var(--bg);font-family:"Segoe UI",system-ui,sans-serif}
+h1,h2,h3,.stats b,.big b,.price b,.logo,.abt h2{font-family:var(--hf)!important;font-weight:700}
+.hd{background:rgba(5,10,24,.92);border-bottom:1px solid #0f2552}
+.logo img{display:block;height:34px;width:auto}
+.btn{border-radius:8px}.btn.pri{background:linear-gradient(90deg,#1a8dff,#2a63ff);box-shadow:0 0 20px #1a7dff88}
+.card{background:linear-gradient(160deg,rgba(14,28,66,.85),rgba(7,14,36,.92));border-radius:18px;box-shadow:0 0 28px #1a6dff2e,inset 0 0 0 1px #1a3a7a55}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.art{background:#08122e;border-radius:12px;box-shadow:0 0 40px #1a6dff33}
+.art::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050a18 0,transparent 25%);pointer-events:none}
+.sig{z-index:2}
+img.av.big{width:92px;height:92px;object-fit:cover;border:3px solid var(--bl);padding:0}
+.rvm,.lgm{position:relative;overflow:hidden}
+.rvm::before,.rvm::after{content:"";position:absolute;top:0;height:260px;pointer-events:none;background-repeat:no-repeat;background-size:cover}
+.rvm::before{left:0;width:34%;background-image:linear-gradient(90deg,transparent 60%,#050a18),url(rv-left.jpg)}
+.rvm::after{right:0;width:24%;background-image:linear-gradient(270deg,transparent 50%,#050a18),url(rv-right.jpg)}
+.rvm>*,.lgm>*{position:relative;z-index:1}
+.rvm .score{border-color:#e0a62c;background:linear-gradient(160deg,rgba(40,30,20,.7),rgba(8,16,40,.9))}
+.lgm::after{content:"";position:absolute;right:0;top:0;bottom:0;width:26%;background:linear-gradient(90deg,#050a18,transparent 35%),url(login-art.jpg) center/cover;pointer-events:none}
+.lgm .lbox{position:relative;z-index:2}
+@media(max-width:960px){.rvm::before,.rvm::after,.lgm::after{opacity:.35;width:50%}.lgm::after{width:100%}}
